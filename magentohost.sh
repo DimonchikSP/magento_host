@@ -108,8 +108,8 @@ chmod 777 /var/www/$domain/public_html/mage;
 #create DB and add sample-data
 read -p "Enter name for new DB: `echo $'\n> '`" dbname
 echo "Enter password to rcreate DB: $dbname `echo $'\n> '`"
-mysql -h localhost -u root -p -e"create database $dbname `echo $'\n> '`"
-echo "Enter password to insert sample-data to DB: $dbname `echo $'\n> '`"
+mysql -h localhost -u root -p -e"create database $dbname"
+echo "Enter password to insert sample-data to DB: $dbname"
 mysql -h localhost -u root -p $dbname < /var/www/$domain/public_html/magento_sample_data*.sql
 
 #enter all info for install magento
