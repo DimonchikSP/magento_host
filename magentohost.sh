@@ -86,6 +86,7 @@ fi
 chown -R $userName:$userGroup ./magento*
 
 #copy magento to site dir
+shopt -s dotglob
 cp -r magento/* /var/www/$domain/public_html
 cp -r magento-sample-data*/* /var/www/$domain/public_html
 
